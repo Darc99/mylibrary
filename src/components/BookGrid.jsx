@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-class Book extends Component {
+class BookGrid extends Component {
 
     render() {
 
         return (
             <ol className="books-grid">
 
-            </ol>>
+            </ol>
         )
     }
 }
 
-export default Book; 
+export default BookGrid; 

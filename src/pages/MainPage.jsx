@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
+import BooksContent from '../components/BooksContent';
 import Button from '../components/Button'
 
 class MainPage extends Component {
@@ -9,7 +10,7 @@ class MainPage extends Component {
         return (
             <div className="list-books">
                 <Header />
-
+                <BooksContent />
                 <Button />
             </div>
         )
