@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class BooksContent extends React{
+class BooksContent extends Component{
 
     render(){
         return(
@@ -15,7 +15,7 @@ class BooksContent extends React{
                         <li>
                             <div className="book">
                             <div className="book-top">
-                                <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `${book.imageLinks.thumbnail}` }}></div>
+                                <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `${undefined}` }}></div>
                                 <div className="book-shelf-changer">
                                 <select>
                                     <option value="move" disabled>Move to...</option>
@@ -26,8 +26,8 @@ class BooksContent extends React{
                                 </select>
                                 </div>
                             </div>
-                            <div className="book-title">{book.title}</div>
-                            <div className="book-authors">{book.authors}</div>
+                            <div className="book-title"></div>
+                            <div className="book-authors"></div>
                             </div>
                         </li>
                       </ol>
@@ -52,8 +52,8 @@ class BooksContent extends React{
                                 </select>
                                 </div>
                             </div>
-                            <div className="book-title">{book.title}</div>
-                            <div className="book-authors">{book.authors}</div>
+                            <div className="book-title"></div>
+                            <div className="book-authors"></div>
                             </div>
                         </li>
 
@@ -65,7 +65,7 @@ class BooksContent extends React{
                     <div className="bookshelf-books">
                       <ol className="books-grid">
     
-                            <li key={book.title}>
+                            <li>
                             <div className="book">
                             <div className="book-top">
                                 <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `c` }}></div>
