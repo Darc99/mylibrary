@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 
 class BooksContent extends Component{
-
-    render(){
+  
+  render(){
+    const { allbooks } = this.props;
         return(
             <div className="list-books">
               <div className="list-books-content">
@@ -11,7 +12,7 @@ class BooksContent extends Component{
                     <h2 className="bookshelf-title">Currently Reading</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
-    
+                      {allbooks.filter(book=> book.shelf.toLowerCase() === 'currentlyreading').map(book =>
                         <li>
                             <div className="book">
                             <div className="book-top">
@@ -26,10 +27,11 @@ class BooksContent extends Component{
                                 </select>
                                 </div>
                             </div>
-                            <div className="book-title"></div>
-                            <div className="book-authors"></div>
+                            <div className="book-title"> {book.title} </div>
+                            <div className="book-authors"> {book.authors} </div>
                             </div>
                         </li>
+                        )}
                       </ol>
                     </div>
                   </div>
