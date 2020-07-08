@@ -8,10 +8,12 @@ import MainPage from './pages/MainPage';
 import SearchPage from './pages/SearchPage';
 
 class BooksApp extends React.Component {
-
-  state = {
-    books: [] ,
-    shelf: ''
+  constructor() {
+    super();
+      this.state = {
+      books: [] ,
+      shelf: ''
+    }
   }
 
   componentDidMount() {
