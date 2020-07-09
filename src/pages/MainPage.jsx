@@ -16,7 +16,7 @@ class MainPage extends Component {
                       <h2 className="bookshelf-title">Currently Reading</h2>
                       <div className="bookshelf-books">
                         <ol className="books-grid">
-                        {allBooks.filter(book=> book.shelf.toLowerCase() === 'currentlyreading').map(book =>
+                        {allBooks.filter(book=> book.shelf === 'currentlyReading').map(book =>
                           <li key={book.id}>
                               <div className="book">
                               <div className="book-top">
@@ -43,7 +43,7 @@ class MainPage extends Component {
                       <h2 className="bookshelf-title">Want to Read</h2>
                       <div className="bookshelf-books">
                         <ol className="books-grid">
-                        {allBooks.filter(book => book.shelf.toLowerCase() === 'wantToRead').map(book =>
+                        {allBooks.filter(book => book.shelf === 'wantToRead').map(book =>
                           <li key={book.id}>
                               <div className="book">
                               <div className="book-top">
@@ -70,7 +70,7 @@ class MainPage extends Component {
                       <h2 className="bookshelf-title">Read</h2>
                       <div className="bookshelf-books">
                         <ol className="books-grid">
-                            {allBooks.filter(book => book.shelf.toLowerCase() === 'read').map(book => 
+                            {allBooks.filter(book => book.shelf === 'read').map(book => 
                               <li key={book.id}>
                               <div className="book">
                               <div className="book-top">
